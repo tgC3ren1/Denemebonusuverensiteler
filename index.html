@@ -1,201 +1,220 @@
 <!doctype html>
 <html lang="tr">
-  <head>
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>Deneme bonusu Veren siteler</title>
-    <meta name="description" content="En Kaliteli Deneme Bonusu botlarını sizin için derledik. Telegram bot adresleri tek sayfada, hızlı erişim için tasarlandı." />
-    <meta property="og:title" content="Deneme bonusu Veren siteler" />
-    <meta property="og:description" content="En Kaliteli Deneme Bonusu botlarını sizin için derledik." />
-    <meta property="og:type" content="website" />
-    <meta name="theme-color" content="#0ea5e9" />
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Poppins:wght@600;700;800&display=swap" rel="stylesheet">
-    <style>
-      :root {
-        --bg: #0b1020; --card: rgba(255,255,255,0.06); --card-border: rgba(255,255,255,0.08);
-        --text: #e6edf3; --muted: #a1adc0; --accent: #38bdf8; --accent-2: #a78bfa; --accent-3: #22d3ee;
-      }
-      *{box-sizing:border-box}
-      html,body{height:100%}
-      body{margin:0;background:radial-gradient(1200px 800px at 10% -20%,#1e293b 0%,transparent 60%),radial-gradient(900px 700px at 110% 0%,#0ea5e955 0%,transparent 60%),linear-gradient(180deg,#0b1020 0%,#0b1020 100%);color:var(--text);font-family:Inter,system-ui,-apple-system,Segoe UI,Roboto,Helvetica,Arial,sans-serif;overflow-x:hidden}
-      .blob{position:fixed;filter:blur(60px);opacity:.55;z-index:-1;mix-blend-mode:screen;animation:float 16s ease-in-out infinite}
-      .blob.one{width:520px;height:520px;background:radial-gradient(circle at 30% 30%,var(--accent),transparent 60%);top:-120px;left:-120px}
-      .blob.two{width:480px;height:480px;background:radial-gradient(circle at 70% 40%,var(--accent-2),transparent 60%);bottom:-140px;right:-120px;animation-delay:-6s}
-      .blob.three{width:420px;height:420px;background:radial-gradient(circle at 50% 50%,var(--accent-3),transparent 60%);top:40%;left:60%;animation-delay:-10s}
-      @keyframes float{0%,100%{transform:translate3d(0,0,0) scale(1)}50%{transform:translate3d(0,-20px,0) scale(1.05)}}
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Deneme bonusu Veren siteler</title>
+  <meta name="description" content="En Kaliteli Deneme Bonusu botlarını sizin için derledik. Telegram bot adresleri tek sayfada, hızlı erişim için tasarlandı." />
+  <meta property="og:title" content="Deneme bonusu Veren siteler" />
+  <meta property="og:description" content="En Kaliteli Deneme Bonusu botlarını sizin için derledik." />
+  <meta property="og:type" content="website" />
+  <meta name="theme-color" content="#0ea5e9" />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+  <style>
+    :root{
+      --bg:#070a11;
+      --text:#e8ecf3;
+      --muted:#a7b1c2;
+      --card:#0c1321dd;
+      --card-2:#0e1626aa;
+      --chip-bg:#ffffff14;
+      --chip-br:#ffffff2a;
+      --accent:#22d3ee;
+      --shadow: 0 10px 30px rgba(0,0,0,.35);
+    }
+    *{box-sizing:border-box}
+    html,body{height:100%}
+    body{
+      margin:0; font-family:"Inter",system-ui,-apple-system,Segoe UI,Roboto,Ubuntu,"Helvetica Neue",Arial; color:var(--text);
+      background: radial-gradient(1200px 800px at 20% 10%, #102044, transparent 60%),
+                  radial-gradient(800px 600px at 80% 10%, #1e3a8a, transparent 55%),
+                  radial-gradient(1000px 700px at 50% 100%, #0b1b3a, transparent 60%),
+                  var(--bg);
+      overflow-x:hidden;
+    }
 
-      header{position:relative;padding:72px 24px 24px;text-align:center}
-      .title{font-family:Poppins,Inter;font-weight:800;letter-spacing:-.02em;font-size:clamp(28px,6vw,60px);line-height:1.05;margin:0 auto;max-width:1100px;background:linear-gradient(90deg,#fff,#c4e3ff 30%,#e9d5ff 70%,#ccfbf1);-webkit-background-clip:text;background-clip:text;color:transparent}
-      .subtitle{color:var(--muted);font-size:clamp(14px,2.2vw,18px);margin:14px auto 24px;max-width:900px}
-      .toolbar{display:flex;gap:12px;justify-content:center;flex-wrap:wrap;margin-top:10px}
-      .search{display:flex;align-items:center;gap:10px;background:var(--card);border:1px solid var(--card-border);padding:10px 14px;border-radius:14px;min-width:260px;backdrop-filter:blur(10px)}
-      .search input{background:transparent;border:none;outline:none;color:var(--text);font-size:15px;width:260px}
-      .badge{border:1px solid var(--card-border);background:linear-gradient(180deg,rgba(255,255,255,.08),rgba(255,255,255,.04));padding:8px 12px;border-radius:999px;font-weight:600;font-size:12px;color:#dbeafe}
+    .blob{ position:fixed; inset:auto; z-index:-2; filter: blur(38px) saturate(1.4);
+      width:40vmin; height:40vmin; border-radius:50%; opacity:.55; pointer-events:none;
+      background: radial-gradient(circle at 30% 30%, rgba(255,255,255,.8), transparent 35%), var(--blob-gradient);
+      animation: float 22s ease-in-out infinite; }
+    .blob.b1{ top:8%; left:6%; --blob-gradient: radial-gradient(65% 65% at 50% 50%, #00f0ff, #0066ff 60%, transparent 70%); animation-delay:-2s }
+    .blob.b2{ top:16%; right:2%; --blob-gradient: radial-gradient(70% 70% at 40% 40%, #ff00f4, #7c00ff 60%, transparent 75%); animation-delay:-6s }
+    .blob.b3{ bottom:10%; left:8%; --blob-gradient: radial-gradient(70% 70% at 40% 40%, #00ff85, #00b3ff 60%, transparent 75%); animation-delay:-9s }
+    .blob.b4{ bottom:2%; right:6%; --blob-gradient: radial-gradient(70% 70% at 40% 40%, #ff7a00, #ffd100 60%, transparent 75%); animation-delay:-13s }
+    @keyframes float{ 0%,100%{transform:translate(0,0) scale(1)} 50%{transform:translate(0,-30px) scale(1.06)} }
 
-      main{padding:32px 24px 80px;max-width:1200px;margin:0 auto}
-      .grid{display:grid;grid-template-columns:repeat(1,minmax(0,1fr));gap:18px}
-      @media(min-width:640px){.grid{grid-template-columns:repeat(2,1fr)}}
-      @media(min-width:1024px){.grid{grid-template-columns:repeat(3,1fr)}}
+    #snow{ position:fixed; inset:0; z-index:-1; pointer-events:none; }
 
-      /* Animatable var for breathing */
-      @property --breath{syntax:'<number>';inherits:false;initial-value:1}
+    header{ position:relative; padding:56px 20px 24px; text-align:center; }
+    h1{ font-size: clamp(28px, 4vw, 46px); line-height:1.08; margin:0 0 12px; letter-spacing:.3px; text-shadow:0 8px 40px #0008; }
+    .sub{ color:var(--muted); font-weight:500; font-size: clamp(14px, 1.8vw, 18px); }
 
-      .card{position:relative;border:1px solid var(--card-border);background:linear-gradient(180deg,rgba(255,255,255,.08),rgba(255,255,255,.04));padding:18px;border-radius:18px;overflow:hidden;backdrop-filter:blur(8px);--lift:0px;--breath:1;transform:translateY(var(--lift)) scale(var(--breath));transition:box-shadow .25s ease,border-color .25s ease,filter .25s ease;animation:breathe var(--bDur,10s) ease-in-out infinite}
-      .card:hover{--lift:-6px;box-shadow:0 20px 40px rgba(3,7,18,.45);border-color:rgba(255,255,255,.14)}
-      .card::after{content:"";position:absolute;inset:-1px;border-radius:20px;padding:1.5px;background:conic-gradient(from 0deg,#ff0080,#ff8c00,#ffee00,#00ff9c,#00ccff,#7a5cff,#ff0080);-webkit-mask:linear-gradient(#000 0 0) content-box,linear-gradient(#000 0 0);-webkit-mask-composite:xor;mask-composite:exclude;animation:spin 6s linear infinite;opacity:.35}
-      .card:hover::after{opacity:.65}
-      @keyframes spin{to{transform:rotate(1turn)}}
-      @keyframes breathe{0%,100%{--breath:1;filter:saturate(1)}50%{--breath:1.012;filter:saturate(1.05)}}
-      .card.pop{--breath:1.02;filter:brightness(1.08)}
+    .grid{ width:min(1200px,92vw); margin:28px auto 80px; display:grid; grid-template-columns:repeat(auto-fit,minmax(260px,1fr)); gap:20px; }
 
-      .card-head{display:flex;gap:12px;align-items:center;margin-bottom:8px;padding-right:96px}
-      .icon{width:42px;height:42px;border-radius:12px;display:grid;place-items:center;background:radial-gradient(100% 100% at 30% 30%,#1f2a44 0%,#0f172a 100%);border:1px solid #263048}
-      .icon svg{width:22px;height:22px}
-      .name{font-weight:700;font-size:17px}
-      .desc{color:var(--muted);font-size:13px;margin-top:2px}
-      .tag{position:absolute;top:12px;right:12px;background:rgba(56,189,248,.15);color:#bae6fd;border:1px solid rgba(56,189,248,.35);padding:6px 10px;border-radius:999px;font-size:11px;font-weight:800;letter-spacing:.4px;z-index:1}
+    @property --angle{ syntax:'<angle>'; initial-value: 0deg; inherits: false; }
+    .card{ position:relative; border-radius:18px; padding:18px 16px 16px; background: linear-gradient(180deg, var(--card), var(--card-2));
+      box-shadow: var(--shadow); overflow:hidden; transition: transform .2s ease, box-shadow .2s ease; isolation:isolate; }
+    .card:hover{ transform: translateY(-2px); box-shadow: 0 12px 40px rgba(0,0,0,.45); }
+    .card::before{
+      content:""; position:absolute; inset:-2px; padding:2px; border-radius:20px; z-index:-1;
+      background: repeating-conic-gradient(from var(--angle), var(--neon-a) 0 14deg, transparent 14deg 22deg,
+                  var(--neon-b) 22deg 36deg, transparent 36deg 44deg);
+      -webkit-mask: linear-gradient(#000 0 0) content-box, linear-gradient(#000 0 0);
+      -webkit-mask-composite: xor; mask-composite: exclude;
+      animation: spin 8s linear infinite;
+      filter: drop-shadow(0 0 14px var(--glow));
+    }
+    @keyframes spin{ to{ --angle:360deg } }
 
-      .link-row{display:flex;gap:10px;align-items:center;margin-top:10px;flex-wrap:wrap}
-      .url{font-family:ui-monospace,SFMono-Regular,Menlo,Monaco,Consolas,"Liberation Mono","Courier New",monospace;background:rgba(15,23,42,.6);color:#d1d5db;border:1px dashed #334155;padding:8px 10px;border-radius:10px;font-size:12px}
-      .btn{cursor:pointer;border:1px solid var(--card-border);background:linear-gradient(180deg,rgba(255,255,255,.12),rgba(255,255,255,.06));color:#e2e8f0;padding:9px 12px;border-radius:12px;font-weight:700;font-size:12px;letter-spacing:.3px;display:inline-flex;gap:8px;align-items:center;text-decoration:none;transition:filter .2s ease,transform .2s ease}
-      .btn:hover{filter:brightness(1.15);transform:translateY(-1px)}
+    .title{ font-weight:800; letter-spacing:.2px; font-size:18px; margin:6px 0 8px; }
+    .tags{ display:flex; flex-wrap:wrap; gap:8px; margin:8px 0 14px; }
+    .tag{ font-size:12px; padding:6px 10px; border-radius:999px; border:1px solid var(--chip-br); background:var(--chip-bg); backdrop-filter: blur(6px); }
 
-      footer{text-align:center;color:var(--muted);padding:36px 16px 60px;font-size:13px}
-      .small{font-size:12px;color:#8ea0b8}
-    </style>
-  </head>
-  <body>
-    <div class="blob one"></div>
-    <div class="blob two"></div>
-    <div class="blob three"></div>
+    .cta{ display:flex; align-items:center; justify-content:center; gap:10px;
+      width:100%; border:1px solid transparent; border-radius:12px; padding:12px 14px; font-weight:700; text-decoration:none; color:var(--text);
+      background: linear-gradient(180deg, #1f324f, #1a2841);
+      position:relative; overflow:hidden; }
+    .cta:hover{ filter:brightness(1.1); }
+    .cta svg{ width:18px; height:18px; flex:0 0 18px; }
 
-    <header>
-      <h1 class="title">Deneme bonusu Veren siteler</h1>
-      <p class="subtitle">En Kaliteli Deneme Bonusu botlarını <strong>sizin için derledik</strong>. Tek tıkla Telegram'da açın veya linki kopyalayın.</p>
-      <div class="toolbar">
-        <div class="search">
-          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M21 21l-4.35-4.35" stroke="#9fb3c8" stroke-width="2" stroke-linecap="round"/><circle cx="10.5" cy="10.5" r="6.5" stroke="#9fb3c8" stroke-width="2"/></svg>
-          <input id="search" type="text" placeholder="Bot ara... (isim / kullanıcı)" aria-label="Bot ara" />
-        </div>
-        <span class="badge">⚡ Hızlı erişim • 📱 Mobil uyumlu • 🛡️ HTTPS</span>
-      </div>
-    </header>
+    .card{ --anim-dur:8s; --anim-delay:0s }
+    .pop{ animation: pop var(--anim-dur) ease-in-out infinite var(--anim-delay); }
+    .breathe{ animation: breathe var(--anim-dur) ease-in-out infinite var(--anim-delay); }
+    @keyframes pop{ 0%, 96% { transform: translateY(0) scale(1); } 98% { transform: translateY(-2px) scale(1.03); } 100%{ transform: translateY(0) scale(1); } }
+    @keyframes breathe{ 0%,100%{ transform: translateY(0) scale(1); filter: drop-shadow(0 0 0 rgba(255,255,255,0)); } 50%{ transform: translateY(-1px) scale(1.015); filter: drop-shadow(0 0 12px var(--glow)); } }
 
-    <main>
-      <section class="grid" id="grid">
-        <!-- Cards -->
-        <article class="card" data-name="Yapay zeka Bahis" data-user="Yapayzekabah1sbot">
-          <span class="tag">GÜNCEL</span>
-          <div class="card-head"><div class="icon" aria-hidden="true"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="12" fill="#1f2937"/></svg></div><div><div class="name">Yapay zeka Bahis</div><div class="desc">@Yapayzekabah1sbot</div></div></div>
-          <div class="link-row"><code class="url">https://t.me/Yapayzekabah1sbot</code><a class="btn" href="https://t.me/Yapayzekabah1sbot" target="_blank" rel="noopener">Telegram'da Aç</a><button class="btn" data-copy="https://t.me/Yapayzekabah1sbot">Kopyala</button></div>
-        </article>
+    footer{ color:#9fb1cf; text-align:center; padding:30px 14px 60px; opacity:.75; font-size:13px }
+    @media (max-width:480px){ .tag{font-size:11px} .cta{padding:12px} }
+  </style>
+</head>
+<body>
+  <canvas id="snow"></canvas>
+  <div class="blob b1"></div>
+  <div class="blob b2"></div>
+  <div class="blob b3"></div>
+  <div class="blob b4"></div>
 
-        <article class="card" data-name="Yatırımsız Deneme Bonusu Veren Siteler" data-user="Marsbahis1casibombot">
-          <span class="tag">POPÜLER</span>
-          <div class="card-head"><div class="icon" aria-hidden="true"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="12" fill="#1f2937"/></svg></div><div><div class="name">Yatırımsız Deneme Bonusu Veren Siteler</div><div class="desc">@Marsbahis1casibombot</div></div></div>
-          <div class="link-row"><code class="url">https://t.me/Marsbahis1casibombot</code><a class="btn" href="https://t.me/Marsbahis1casibombot" target="_blank" rel="noopener">Telegram'da Aç</a><button class="btn" data-copy="https://t.me/Marsbahis1casibombot">Kopyala</button></div>
-        </article>
+  <header>
+    <h1>Deneme bonusu Veren siteler</h1>
+    <div class="sub">En Kaliteli Deneme Bonusu botlarını <strong>sizin için derledik</strong>.</div>
+  </header>
 
-        <article class="card" data-name="Çevrimsiz deneme bonusu veren siteler" data-user="Denemebonusuveren1bot">
-          <span class="tag">ÇEVRİMSİZ</span>
-          <div class="card-head"><div class="icon" aria-hidden="true"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="12" fill="#1f2937"/></svg></div><div><div class="name">Çevrimsiz deneme bonusu veren siteler</div><div class="desc">@Denemebonusuveren1bot</div></div></div>
-          <div class="link-row"><code class="url">https://t.me/Denemebonusuveren1bot</code><a class="btn" href="https://t.me/Denemebonusuveren1bot" target="_blank" rel="noopener">Telegram'da Aç</a><button class="btn" data-copy="https://t.me/Denemebonusuveren1bot">Kopyala</button></div>
-        </article>
+  <main class="grid" id="grid" aria-live="polite"></main>
 
-        <article class="card" data-name="Deneme kutusu bot" data-user="DenemeKutusubot">
-          <div class="card-head"><div class="icon" aria-hidden="true"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="12" fill="#1f2937"/></svg></div><div><div class="name">Deneme kutusu bot</div><div class="desc">@DenemeKutusubot</div></div></div>
-          <div class="link-row"><code class="url">https://t.me/DenemeKutusubot</code><a class="btn" href="https://t.me/DenemeKutusubot" target="_blank" rel="noopener">Telegram'da Aç</a><button class="btn" data-copy="https://t.me/DenemeKutusubot">Kopyala</button></div>
-        </article>
+  <footer>
+    * Sayfa açıldığında ve herhangi bir yere tıkladığınızda botların sıralaması rastgele değişir.
+  </footer>
 
-        <article class="card" data-name="Deneme bonusu veren siteler" data-user="denemekutubot">
-          <div class="card-head"><div class="icon" aria-hidden="true"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="12" fill="#1f2937"/></svg></div><div><div class="name">Deneme bonusu veren siteler</div><div class="desc">@denemekutubot</div></div></div>
-          <div class="link-row"><code class="url">https://t.me/denemekutubot</code><a class="btn" href="https://t.me/denemekutubot" target="_blank" rel="noopener">Telegram'da Aç</a><button class="btn" data-copy="https://t.me/denemekutubot">Kopyala</button></div>
-        </article>
+<script>
+  const TAGS = ["GÜNCEL","POPÜLER","ÇEVRİMSİZ","ÖNERİLEN","YENİ"];
+  const BOTS = [
+    { name:"Yapay zeka Bahis", url:"https://t.me/Yapayzekabah1sbot", tags:["YENİ","ÖNERİLEN"] },
+    { name:"Yatırımsız Deneme Bonusu Veren Siteler", url:"https://t.me/Marsbahis1casibombot", tags:["POPÜLER","ÖNERİLEN"] },
+    { name:"Çevrimsiz deneme bonusu veren siteler", url:"https://t.me/Denemebonusuveren1bot", tags:["ÇEVRİMSİZ","GÜNCEL"] },
+    { name:"Deneme kutusu bot", url:"https://t.me/DenemeKutusubot", tags:["YENİ","POPÜLER"] },
+    { name:"Deneme bonusu veren siteler", url:"https://t.me/denemekutubot", tags:["GÜNCEL","ÖNERİLEN"] },
+    { name:"En iyi deneme bonusu veren siteler", url:"https://t.me/betine_denemebonusbot", tags:["POPÜLER","ÖNERİLEN"] },
+    { name:"Güncel Deneme Bonusu Veren Siteler", url:"https://t.me/tarafbetGitBOT", tags:["GÜNCEL"] },
+    { name:"Melis vibes Vip TÜRK İFŞA", url:"https://t.me/melisvibes", tags:["YENİ"] },
+  ];
 
-        <article class="card" data-name="En iyi deneme bonusu veren siteler" data-user="betine_denemebonusbot">
-          <span class="tag">ÖNERİLEN</span>
-          <div class="card-head"><div class="icon" aria-hidden="true"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="12" fill="#1f2937"/></svg></div><div><div class="name">En iyi deneme bonusu veren siteler</div><div class="desc">@betine_denemebonusbot</div></div></div>
-          <div class="link-row"><code class="url">https://t.me/betine_denemebonusbot</code><a class="btn" href="https://t.me/betine_denemebonusbot" target="_blank" rel="noopener">Telegram'da Aç</a><button class="btn" data-copy="https://t.me/betine_denemebonusbot">Kopyala</button></div>
-        </article>
+  const THEMES = [
+    { glow:'rgba(34,211,238,.6)', a:'#22d3ee', b:'#84e1ff' },
+    { glow:'rgba(255,0,204,.5)', a:'#ff00cc', b:'#ff66ff' },
+    { glow:'rgba(0,255,135,.5)', a:'#00ff87', b:'#00ffd1' },
+    { glow:'rgba(255,149,0,.5)', a:'#ff7a00', b:'#ffd100' },
+    { glow:'rgba(138,43,226,.55)', a:'#8a2be2', b:'#ff00ff' },
+    { glow:'rgba(51,153,255,.55)', a:'#3399ff', b:'#66ccff' },
+    { glow:'rgba(255,68,68,.5)', a:'#ff3b6b', b:'#ff8aa1' },
+  ];
 
-        <article class="card" data-name="Güncel Deneme Bonusu Veren Siteler" data-user="tarafbetGitBOT">
-          <span class="tag">YENİ</span>
-          <div class="card-head"><div class="icon" aria-hidden="true"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="12" fill="#1f2937"/></svg></div><div><div class="name">Güncel Deneme Bonusu Veren Siteler</div><div class="desc">@tarafbetGitBOT</div></div></div>
-          <div class="link-row"><code class="url">https://t.me/tarafbetGitBOT</code><a class="btn" href="https://t.me/tarafbetGitBOT" target="_blank" rel="noopener">Telegram'da Aç</a><button class="btn" data-copy="https://t.me/tarafbetGitBOT">Kopyala</button></div>
-        </article>
+  const grid = document.getElementById('grid');
 
-        <article class="card" data-name="Melis vibes Vip TÜRK İFŞA" data-user="melisvibes">
-          <span class="tag" style="background:rgba(255,0,128,.18);border-color:rgba(255,0,128,.45);color:#ffcfe6;">VIP</span>
-          <div class="card-head"><div class="icon" aria-hidden="true"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="12" fill="#1f2937"/></svg></div><div><div class="name">Melis vibes Vip TÜRK İFŞA</div><div class="desc">@melisvibes</div></div></div>
-          <div class="link-row"><code class="url">https://t.me/melisvibes</code><a class="btn" href="https://t.me/melisvibes" target="_blank" rel="noopener">Telegram'da Aç</a><button class="btn" data-copy="https://t.me/melisvibes">Kopyala</button></div>
-        </article>
+  function createCard(bot, idx){
+    const theme = THEMES[idx % THEMES.length];
+    const card = document.createElement('article');
+    card.className = 'card';
+    card.style.setProperty('--glow', theme.glow);
+    card.style.setProperty('--neon-a', theme.a);
+    card.style.setProperty('--neon-b', theme.b);
+    const fx = Math.random() < 0.5 ? 'breathe' : 'pop';
+    card.classList.add(fx);
+    card.style.setProperty('--anim-dur', (7 + Math.random()*6).toFixed(2)+'s');
+    card.style.setProperty('--anim-delay', (Math.random()*2).toFixed(2)+'s');
 
-      </section>
-    </main>
+    const h = document.createElement('div'); h.className='title'; h.textContent = bot.name;
 
-    <footer>
-      <div>📌 <strong>Alt bilgi:</strong> En Kaliteli Deneme Bonusu botlarını <strong>sizin için derledik</strong>. Listeyi çoğaltabilir veya kategorilere ayırabilirsiniz.</div>
-      <div class="small">Made for GitHub Pages • Tek dosya (index.html) • © 2025</div>
-    </footer>
+    const tags = document.createElement('div'); tags.className='tags';
+    bot.tags.forEach(t=>{
+      const el=document.createElement('span'); el.className='tag'; el.textContent=t; tags.appendChild(el);
+    });
 
-    <script>
-      const searchInput = document.getElementById('search');
-      const grid = document.getElementById('grid');
+    const a = document.createElement('a');
+    a.className='cta'; a.href=bot.url; a.target='_blank'; a.rel='noopener noreferrer';
+    a.setAttribute('aria-label', bot.name + ' Telegram bağlantısını aç');
+    a.innerHTML = '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M22 2L11 13"/><path d="M22 2l-7 20-4-9-9-4 20-7z"/></svg> Telegram\'da Aç';
 
-      // Search filter
-      searchInput.addEventListener('input', (e) => {
-        const q = e.target.value.toLowerCase().trim();
-        Array.from(grid.children).forEach(card => {
-          const name = (card.dataset.name||'').toLowerCase();
-          const user = (card.dataset.user||'').toLowerCase();
-          card.style.display = (name.includes(q) || user.includes(q)) ? '' : 'none';
-        });
-      });
+    card.append(h, tags, a);
+    return card;
+  }
 
-      // Copy buttons
-      document.addEventListener('click', async (e) => {
-        const btn = e.target.closest('button[data-copy]');
-        if (!btn) return;
-        const text = btn.getAttribute('data-copy');
-        try { await navigator.clipboard.writeText(text); btn.textContent = 'Kopyalandı!'; setTimeout(()=>btn.textContent='Kopyala',1600);} 
-        catch { btn.textContent='Kopyalanamadı'; setTimeout(()=>btn.textContent='Kopyala',1600);} 
-      });
+  function render(){
+    grid.innerHTML = '';
+    // Önce karıştır
+    const shuffled = [...BOTS].sort(()=>Math.random()-0.5);
+    shuffled.forEach((bot,i)=> grid.appendChild(createCard(bot,i)) );
+  }
 
-      // Random breathe durations + delays
-      const cards = Array.from(grid.querySelectorAll('.card'));
-      cards.forEach((card)=>{
-        const dur=(Math.random()*6+8).toFixed(2)+'s'; // 8-14s
-        const delay=(-Math.random()*10).toFixed(2)+'s';
-        card.style.setProperty('--bDur',dur);
-        card.style.animationDelay=delay;
-      });
+  function shuffle(){
+    const cards = Array.from(grid.children);
+    for(let i=cards.length-1;i>0;i--){
+      const j = Math.floor(Math.random()*(i+1));
+      grid.appendChild(cards[j]);
+      cards.splice(j,1);
+    }
+  }
 
-      // Occasional pop
-      setInterval(()=>{
-        const card = cards[Math.floor(Math.random()*cards.length)];
-        if (!card) return; card.classList.add('pop');
-        setTimeout(()=>card.classList.remove('pop'),350);
-      },3000);
+  document.addEventListener('click', ()=>{ shuffle(); });
 
-      // Shuffle cards util
-      function shuffleGrid(){
-        const visible = Array.from(grid.children).filter(el=>el.style.display!=="none");
-        for(let i=visible.length-1;i>0;i--){
-          const j=Math.floor(Math.random()*(i+1));
-          grid.insertBefore(visible[j], visible[i]);
-          const tmp=visible[i]; visible[i]=visible[j]; visible[j]=tmp;
-        }
-      }
+  render();
 
-      // Shuffle on load
-      shuffleGrid();
-      // Shuffle on ANY click except UI controls (but page background/header clicks çalışır)
-      document.addEventListener('click',(e)=>{
-        if (e.target.closest('input, .btn, a, .search, code')) return; 
-        shuffleGrid();
-      });
-    </script>
-  </body>
+  const canvas = document.getElementById('snow');
+  const ctx = canvas.getContext('2d');
+  let flakes=[]; let W=0,H=0; let last=0;
+  function resize(){ W=canvas.width=window.innerWidth; H=canvas.height=window.innerHeight; }
+  window.addEventListener('resize', resize); resize();
+
+  function initSnow(){
+    const count = Math.floor((W*H)/12000);
+    flakes = Array.from({length:count}, ()=>({
+      x: Math.random()*W,
+      y: Math.random()*H,
+      r: Math.random()*2.2 + 0.6,
+      s: Math.random()*0.8 + 0.2,
+      drift: (Math.random()*0.6 - 0.3),
+      a: Math.random()*Math.PI*2
+    }));
+  }
+  initSnow();
+  window.addEventListener('resize', initSnow);
+
+  function tick(ts){
+    const dt = Math.min(32, ts - last); last = ts;
+    ctx.clearRect(0,0,W,H);
+    ctx.fillStyle = 'rgba(255,255,255,.9)';
+    flakes.forEach(f=>{
+      f.y += (0.3 + f.s) * (dt/16);
+      f.x += Math.sin(f.a += 0.01) * (0.4 + f.drift);
+      if(f.y > H+5){ f.y = -10; f.x = Math.random()*W; }
+      if(f.x > W+5){ f.x = -5; }
+      if(f.x < -5){ f.x = W+5; }
+      ctx.beginPath(); ctx.arc(f.x,f.y,f.r,0,Math.PI*2); ctx.fill();
+    });
+    requestAnimationFrame(tick);
+  }
+  requestAnimationFrame(tick);
+</script>
+</body>
 </html>
