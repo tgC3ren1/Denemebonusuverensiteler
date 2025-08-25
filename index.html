@@ -1,0 +1,188 @@
+import Head from "next/head";
+import React from "react";
+
+const bots = [
+  { title: "Yapay zeka Bahis", tag: "Yapay Zeka", url: "https://t.me/Yapayzekabah1sbot" },
+  { title: "Yatırımsız Deneme Bonusu Veren Siteler", tag: "Yatırımsız", url: "https://t.me/Marsbahis1casibombot" },
+  { title: "Çevrimsiz deneme bonusu veren siteler", tag: "Çevrimsiz", url: "https://t.me/Denemebonusuveren1bot" },
+  { title: "Deneme kutusu bot", tag: "Kutu", url: "https://t.me/DenemeKutusubot" },
+  { title: "Deneme bonusu veren siteler", tag: "Genel", url: "https://t.me/denemekutubot" },
+  { title: "En iyi deneme bonusu veren siteler", tag: "Top List", url: "https://t.me/betine_denemebonusbot" },
+  { title: "Güncel Deneme Bonusu Veren Siteler", tag: "Güncel", url: "https://t.me/tarafbetGitBOT" },
+];
+
+export default function Home() {
+  const [q, setQ] = React.useState("");
+  const list = bots.filter(b => (b.title + " " + b.tag).toLowerCase().includes(q.toLowerCase()));
+
+  const ld = {
+    "@context": "https://schema.org",
+    "@type": "CollectionPage",
+    name: "Deneme Bonusu Botları",
+    description: "Yatırımsız ve çevrimsiz deneme bonusu botları için tek sayfa erişim",
+    isPartOf: { "@type": "WebSite", name: "Bonus Hub" },
+    about: ["deneme bonusu", "çevrimsiz bonus", "yatırımsız bonus", "telegram bot"],
+    hasPart: bots.map(b => ({ "@type": "WebApplication", name: b.title, url: b.url })),
+  };
+
+  return (
+    <>
+      <Head>
+        <title>Deneme Bonusu Botları • Hızlı Erişim</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <meta name="theme-color" content="#0f172a" />
+        <meta name="description" content="Yatırımsız / çevrimsiz deneme bonusu botlarını tek sayfada topla, Telegram'da anında aç. 18+ • Sorumlu oyun." />
+        <meta property="og:title" content="Deneme Bonusu Botları • Hızlı Erişim" />
+        <meta property="og:description" content="Tüm deneme bonusu botları tek sayfada. Telegram’da anında aç." />
+        <meta property="og:type" content="website" />
+        <meta property="og:image" content="https://dummyimage.com/1200x630/0f172a/f9fafb&text=Deneme+Bonusu+Botlar%C4%B1" />
+        {/* Tailwind kullanıyorsan projede zaten derleniyor olmalı. CDN yerine postcss/cli ile kurulu olmalı. */}
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(ld) }}
+        />
+      </Head>
+
+      <main className="min-h-screen bg-slate-950 text-white">
+        {/* BG glows */}
+        <div className="pointer-events-none fixed inset-0 -z-10 overflow-hidden">
+          <div className="absolute -top-24 left-1/2 h-[40rem] w-[40rem] -translate-x-1/2 rounded-full bg-fuchsia-600/20 blur-[120px]" />
+          <div className="absolute top-1/3 -left-20 h-[28rem] w-[28rem] rounded-full bg-cyan-500/20 blur-[120px]" />
+          <div className="absolute bottom-0 right-0 h-[28rem] w-[28rem] rounded-full bg-amber-500/10 blur-[140px]" />
+        </div>
+
+        {/* Header */}
+        <header className="mx-auto flex w-full max-w-7xl items-center justify-between gap-4 px-6 py-6">
+          <div className="flex items-center gap-3">
+            <div className="flex h-11 w-11 items-center justify-center rounded-2xl bg-gradient-to-br from-amber-400 to-fuchsia-500 shadow-[0_0_60px_rgba(217,70,239,.25),0_0_80px_rgba(245,158,11,.15)]">
+              <span className="text-xl font-black text-slate-950">🎁</span>
+            </div>
+            <div>
+              <p className="text-xs uppercase tracking-widest text-fuchsia-300/80">Betine</p>
+              <h1 className="text-lg font-semibold leading-none">Bonus Hub</h1>
+            </div>
+          </div>
+          <nav className="hidden items-center gap-6 md:flex">
+            <a href="#bots" className="text-sm text-slate-300 hover:text-white">Botlar</a>
+            <a href="#how" className="text-sm text-slate-300 hover:text-white">Nasıl Çalışır</a>
+            <a href="#faq" className="text-sm text-slate-300 hover:text-white">SSS</a>
+          </nav>
+        </header>
+
+        {/* Hero */}
+        <section className="relative mx-auto grid w-full max-w-7xl grid-cols-1 items-center gap-10 px-6 pb-16 pt-4 md:grid-cols-2 md:pt-10">
+          <div>
+            <span className="inline-flex items-center gap-2 rounded-full border border-fuchsia-400/30 bg-fuchsia-500/10 px-3 py-1 text-xs text-fuchsia-200">
+              Deneme Bonusu • Tek Seferlik • 18+
+            </span>
+            <h2 className="mt-4 text-4xl font-extrabold leading-[1.1] tracking-tight md:text-6xl">
+              Tüm <span className="bg-gradient-to-br from-amber-300 to-fuchsia-400 bg-clip-text text-transparent">Bonus Botları</span> Tek Linkte
+            </h2>
+            <p className="mt-5 max-w-xl text-base text-slate-300 md:text-lg">
+              Telegram’da arama derdi yok. Botu aç → doğrula → <span className="font-semibold">/bonus</span> yaz → kodu kap.
+            </p>
+            <div className="mt-6 flex flex-col items-start gap-3 sm:flex-row">
+              <a href="#bots" className="inline-flex items-center justify-center gap-2 rounded-2xl bg-gradient-to-br from-fuchsia-500 to-amber-400 px-5 py-3 font-semibold text-slate-950 shadow-lg transition hover:scale-[1.02]">
+                Botları Gör
+              </a>
+              <a href="#faq" className="inline-flex items-center justify-center gap-2 rounded-2xl border border-slate-700/60 px-5 py-3 text-slate-200 transition hover:bg-slate-800/60">
+                SSS
+              </a>
+            </div>
+            <div className="mt-6 flex items-center gap-4 text-sm text-slate-400">
+              <div className="flex items-center gap-2">✅ Tekil kullanım</div>
+              <div className="flex items-center gap-2">⚡ 1 dakikada talep</div>
+              <div className="flex items-center gap-2">📱 Telefon doğrulaması</div>
+            </div>
+          </div>
+
+          {/* Right card */}
+          <div className="relative">
+            <div className="absolute -inset-6 rounded-[2rem] bg-gradient-to-br from-fuchsia-500/20 to-amber-400/20 blur-2xl" />
+            <div className="relative rounded-[2rem] border border-white/10 bg-[radial-gradient(ellipse_at_top_left,rgba(249,115,22,.15),transparent_40%),radial-gradient(ellipse_at_bottom_right,rgba(217,70,239,.15),transparent_40%)] p-6 shadow-2xl">
+              <div className="flex items-center gap-3 rounded-xl bg-slate-900/60 p-3">
+                <div className="flex h-10 w-10 items-center justify-center rounded-xl bg-gradient-to-br from-amber-400 to-fuchsia-500">🎁</div>
+                <div>
+                  <p className="text-xs text-slate-400">Şimdi Aktif</p>
+                  <p className="font-semibold">Deneme Bonusu Kataloğu</p>
+                </div>
+              </div>
+              <div className="mt-4 grid grid-cols-3 gap-3 text-center">
+                {["Hızlı","Güvenli","Tek Seferlik"].map(t => (
+                  <div key={t} className="rounded-xl border border-white/10 bg-slate-900/50 p-4 text-sm text-slate-300">{t}</div>
+                ))}
+              </div>
+              <div className="mt-4 rounded-xl border border-amber-400/30 bg-amber-400/10 p-4 text-amber-200">
+                🎯 İpucu: Botu açınca <span className="font-semibold">/bonus</span> yaz – Uygunluk sonrası kodu al.
+              </div>
+            </div>
+          </div>
+        </section>
+
+        {/* Bots + Search */}
+        <section id="bots" className="mx-auto w-full max-w-7xl px-6 py-12">
+          <div className="flex flex-col items-start justify-between gap-4 md:flex-row md:items-end">
+            <div>
+              <h3 className="text-2xl font-bold md:text-3xl">Bot Kataloğu</h3>
+              <p className="mt-1 text-slate-300">Favorini seç, Telegram’da anında aç.</p>
+            </div>
+            <div className="relative w-full md:w-80">
+              <input
+                value={q}
+                onChange={(e) => setQ(e.target.value)}
+                placeholder="Ara: deneme, çevrimsiz, yapay zeka…"
+                className="w-full rounded-xl border border-white/10 bg-slate-900/60 px-4 py-2 text-sm outline-none placeholder:text-slate-500 focus:border-fuchsia-400/40"
+              />
+              <span className="pointer-events-none absolute right-3 top-2.5 text-xs text-slate-500">⌘K</span>
+            </div>
+          </div>
+
+          <div className="mt-6 grid gap-4 md:grid-cols-2 lg:grid-cols-3">
+            {list.map(b => (
+              <a key={b.url} href={b.url} target="_blank" rel="noopener"
+                 className="group relative overflow-hidden rounded-2xl border border-white/10 bg-slate-900/50 p-5 transition hover:-translate-y-1">
+                <div className="absolute -right-8 -top-8 h-36 w-36 rounded-full bg-gradient-to-br from-fuchsia-500/20 to-amber-400/20 blur-2xl transition group-hover:scale-110" />
+                <div className="relative flex items-center gap-3">
+                  <div className="flex h-11 w-11 items-center justify-center rounded-xl bg-gradient-to-br from-fuchsia-500 to-amber-400 text-slate-950">🎁</div>
+                  <div>
+                    <p className="text-xs text-fuchsia-300/80">{b.tag}</p>
+                    <h4 className="text-lg font-semibold">{b.title}</h4>
+                    <p className="text-sm text-slate-300 truncate">{b.url.replace("https://","")}</p>
+                  </div>
+                </div>
+                <div className="mt-4 inline-flex items-center gap-2 text-sm text-fuchsia-200">Telegram’da aç →</div>
+              </a>
+            ))}
+          </div>
+        </section>
+
+        {/* FAQ */}
+        <section id="faq" className="mx-auto w-full max-w-5xl px-6 py-12">
+          <h3 className="text-center text-2xl font-bold md:text-3xl">Sık Sorulan Sorular</h3>
+          <div className="mt-6 divide-y divide-white/10 rounded-2xl border border-white/10 bg-slate-900/40">
+            {[
+              { q: "Deneme bonusu nasıl alınır?", a: "Telegram’da ilgili botu aç, telefonunu doğrula ve /bonus yaz. Uygunluk kontrolü sonrası kodu verilir."},
+              { q: "Kaç defa kullanabilirim?", a: "Tekil kullanım: 1 kişi = 1 hak. Sistem otomatik kontrol eder."},
+              { q: "Güvenli mi?", a: "Telefon paylaşımı Telegram’ın yerleşik özelliği ile gerçekleşir. Ek doğrulama ve anti-fraud katmanları uygulanır."},
+            ].map((f) => (
+              <details key={f.q} className="group p-6">
+                <summary className="flex cursor-pointer list-none items-center justify-between text-left text-base font-medium text-white">
+                  {f.q}<span className="transition group-open:rotate-90">▶</span>
+                </summary>
+                <p className="mt-2 text-slate-300">{f.a}</p>
+              </details>
+            ))}
+          </div>
+        </section>
+
+        {/* Footer */}
+        <footer className="border-t border-white/10 bg-slate-950/60">
+          <div className="mx-auto flex w-full max-w-7xl flex-col items-center justify-between gap-4 px-6 py-8 md:flex-row">
+            <p className="text-xs text-slate-400">© {new Date().getFullYear()} Bonus Hub • Tüm hakları saklıdır.</p>
+            <p className="text-xs text-slate-400">Sorumlu Oyun • 18+ • Bölgesel düzenlemelere uyunuz.</p>
+          </div>
+        </footer>
+      </main>
+    </>
+  );
+}
